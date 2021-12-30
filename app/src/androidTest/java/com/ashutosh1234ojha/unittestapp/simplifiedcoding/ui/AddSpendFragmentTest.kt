@@ -1,8 +1,11 @@
 package com.ashutosh1234ojha.unittestapp.simplifiedcoding.ui
 
+import android.os.Bundle
 import androidx.fragment.app.testing.FragmentScenario
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.lifecycle.Lifecycle
+import androidx.test.core.app.ActivityScenario
+import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -27,7 +30,7 @@ class AddSpendFragmentTest{
 
     @Before
     fun setUp(){
-
+        val bundle=Bundle()
         scenario= launchFragmentInContainer(themeResId = R.style.Theme_MaterialComponents)
         scenario.moveToState(Lifecycle.State.STARTED)
     }

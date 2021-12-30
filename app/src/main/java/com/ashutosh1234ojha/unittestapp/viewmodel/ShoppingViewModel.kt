@@ -35,6 +35,7 @@ class ShoppingViewModel @Inject  constructor(private val repository:ShoppingRepo
 
     fun setCurImageUrl(url: String) {
         _curImageUrl.postValue(url)
+        Constants.my()
     }
 
     fun deleteShoppingItem(shoppingItem: ShoppingItem) = viewModelScope.launch {

@@ -8,5 +8,6 @@ import dagger.hilt.android.HiltAndroidApp
  */
 @HiltAndroidApp
 class ShoppingApplication : MultiDexApplication(){
+
     //hello
 }

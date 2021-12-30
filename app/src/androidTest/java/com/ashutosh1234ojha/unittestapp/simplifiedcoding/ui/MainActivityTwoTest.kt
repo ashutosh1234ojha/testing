@@ -23,17 +23,23 @@ import org.junit.Test
  */
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class MainActivityTwoTest{
-    
+class MainActivityTwoTest {
+
     private lateinit var scenario: ActivityScenario<MainActivityTwo>
 
     @Before
-    fun setup(){
+    fun setup() {
         scenario = launchActivity()
         scenario.moveToState(Lifecycle.State.RESUMED)
     }
+
     @Test
-    fun testAddAndViewSpend(){
+    fun testMainActivityVisibility() {
+        onView(withId(R.id.main)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun testAddAndViewSpend() {
 
 
         onView(withId(R.id.button_add_spend)).perform(click())

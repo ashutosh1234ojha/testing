@@ -34,6 +34,7 @@ class ShoppingViewModelTest {
         viewModel.insertShoppingItem("", "", "")
         val value=viewModel.insertShoppingItemStatus.getOrAwaitValueTest()
         assertThat(value.getContentIfNotHandled()?.status).isEqualTo(Status.ERROR)
+        assertThat(value.getContentIfNotHandled()?.status)
     }
 
     @Test
